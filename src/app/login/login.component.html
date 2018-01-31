@@ -1,0 +1,34 @@
+
+<br><br><br><br><br><br>
+<div class="row">
+
+    <div class="col-md-4"></div>
+    <div class="col-md-4">
+<div class="wrapper">
+  <form class="form-signin" #loginForm="ngForm" (ngSubmit)="LoginUser(loginForm.value)" autocomplete="off" novalidate>
+    <h2 class="form-signin-heading">Please login</h2>
+    <div class="form-group" >         
+    <input type="text" class="form-control" [(ngModel)]="UserName" name="UserName" placeholder="User Name" required="" autofocus="" />
+    </div>
+    <div class="form-group" >         
+    <input type="password" class="form-control" [(ngModel)]="Password" name="Password" placeholder="Password" required="" />
+    </div>
+    <!-- <label class="checkbox">
+      <input type="checkbox" value="remember-me" id="rememberMe" name="rememberMe"> Remember me
+    </label> -->
+    <br>
+    <!-- <span (mouseenter)="mouseoverLogin=true" (mouseleave)="mouseoverLogin=false" ></span> -->
+        <button [disabled]="loginForm.invalid"  type="submit"  class="btn btn-lg btn-primary btn-block">Login</button>
+
+        <em class="ValidationColor" *ngIf="loginForm.controls.UserName?.invalid" > User Name Required</em>
+        <em class="ValidationColor" *ngIf="loginForm.controls.Password?.invalid" > Password Required</em>
+
+        <!-- <em class="ValidationColor" *ngIf="loginForm.controls.UserName?.invalid && (loginForm.controls.UserName?.touched || mouseoverLogin)" > User Name Required</em>
+        <em class="ValidationColor" *ngIf="loginForm.controls.Password?.invalid && (loginForm.controls.Password?.touched || mouseoverLogin)" > Password Required</em> -->
+  </form>
+</div> 
+
+
+</div>
+
+</div>

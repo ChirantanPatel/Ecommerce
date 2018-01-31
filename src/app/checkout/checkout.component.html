@@ -1,0 +1,28 @@
+
+
+<div class="container">
+    <h3><b>Total Items Added : </b> {{TotalCart}}</h3>
+    <button  type="button"  class="btn btn-primary"> &nbsp;Check Out Payment Now</button>
+    <br><br>
+    <div class="row"> 
+       
+      <div class="col-sm-6" *ngFor="let x of GetCartList">
+        <div class="panel panel-default">
+          <div class="panel-body">
+            <div class="card">
+              <div class="card-body">
+                <img src="{{x.image}}" width="250px;" height="220px;"> 
+                <h5 class="card-title"><b>Model :</b> {{x.Model}}</h5>
+                <p class="card-text"> <b>Price :</b>{{x.Price}}</p> 
+                <input type="hidden" [(ngModel)]="x.CartID">
+                <button  (click)="RemoveCart(x)" type="button"  class="btn btn-primary"> &nbsp;Remove Cart</button>               
+              </div>
+            </div>
+          </div>
+        </div> 
+      </div>
+  
+      
+  
+  
+    </div>
