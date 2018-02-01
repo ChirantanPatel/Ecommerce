@@ -82,8 +82,6 @@ export class GetDataService {
 
     GetMIPhoneList() {
       return this.MIPhoneList;
-    
-      
     }
   
 

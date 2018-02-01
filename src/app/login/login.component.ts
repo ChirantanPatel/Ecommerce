@@ -25,9 +25,11 @@ export class LoginComponent implements OnInit {
 
   LoginUser(Login) {
 
+    
+
     this.LoginUserData = this._getDataService.LoginUser(Login.UserName,Login.Password);
-      
-      if(this.LoginUserData != 0){
+      debugger
+      if(this.LoginUserData != undefined){
         this.router.navigate(['MIPhoneList']);   
       }
       else{
